@@ -1,0 +1,255 @@
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start with full transparency */
+    transition: opacity 0.3s ease-in-out; /* Transition effect */
+}
+
+/* Visible state for modal */
+.modal.show {
+    display: block;
+    opacity: 1; /* Fade in effect */
+}
+
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    border-radius: var(----Spacing-03, 12px);
+    background: var(----Color-Background, #F5F5F5);
+    padding: 24px var(----Spacing-05, 32px) var(----Spacing-05, 32px) var(----Spacing-05, 32px);
+
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.modal-title{
+    color: var(----Color-Text, #333);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.1px;
+}
+.btn-A{
+    color: var(----Color-Accent) !important;
+    border:2px solid var(----Color-Accent) !important;
+}
+.btn-H{
+    color: var(----Color-Highlight) !important;
+    border:2px solid var(----Color-Highlight) !important;
+}
+
+.tabs-container {
+    border: 1px solid #ccc;
+}
+
+.nav-tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin:16px 0;
+}
+.nav-tabs .tab-item:first-child{
+    border-right: none !important;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.nav-tabs .tab-item:last-child{
+    border-left: none !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+
+.tab-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: center;
+    color: var(----Color-Highlight, #2E8B57);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.016px;
+    text-transform: capitalize;
+}
+
+.tab-item.active {
+    background: var(----Color-Highlight, #2E8B57);
+    color: var(----Color-Background, #F5F5F5);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.016px;
+    text-transform: capitalize;
+}
+  
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.afhaal-input-wrap span{
+    color: var(----Color-Text);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.016px;
+    padding: 0px 4px;
+}
+.afhaal-input-wrap input{
+    display: flex;
+padding: 14px;
+align-items: center;
+gap: 5px;
+align-self: stretch;
+border-radius: var(----Spacing-02, 8px);
+border: 1px solid var(----Color-Accent, #B0B0B0);
+margin:8px 4px;
+background-color: var(----Color-Background);
+
+}
+.tab-pane select{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    border: 0.5px solid var(----Color-Accent, #B0B0B0);
+    background: var(----Color-Background, #F5F5F5);
+    margin:8px 0;
+}
+.tab-pane textarea{
+    border-radius: var(----Spacing-02, 8px);
+    border: 1.2px solid var(----Color-Accent, #B0B0B0);
+    padding: 14px 10px 10px var(----Spacing-05, 20px);
+    align-self: stretch;
+    color: var(----Color-Accent, #B0B0B0);
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.016px;
+    height: 80px;
+    background-color: var(----Color-Background);
+
+}
+.tab-pane option{
+    color: var(----Color-Text, #333);
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 14px */
+    letter-spacing: 0.014px;
+}
+.Address{
+    width:50% !important;
+}
+
+.extra-wrap span{
+    color: var(----Color-Text, #333);
+    font-family: "Segoe UI";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+.extra-wrap input{
+    width: 22px;
+height: 22px;
+border-radius: 50px;
+border: 2px solid var(--Neutral-Black-400, rgba(24, 20, 31, 0.35));
+margin-right:12px;
+}
+.tab-pane span{
+    color: var(----Color-Text, #333);
+font-family: "Segoe UI";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+letter-spacing: 0.1px;
+}
+
+
+
+
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start with full transparency */
+    transition: opacity 0.3s ease-in-out; /* Transition effect */
+    }
+    
+    /* Visible state for modal */
+    .modal.show {
+    display: block;
+    opacity: 1; /* Fade in effect */
+    }
+    
+ 
+    
+    /* Modal content */
+    .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    border-radius: var(----Spacing-03, 12px);
+    background: var(----Color-Background, #F5F5F5);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+    }
+    
+    .datePickerReserveer{
+        padding-right: 30px; background: none; border:none;
+        color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 200% */
+    letter-spacing: 0.1px;
+    }

@@ -1,0 +1,465 @@
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    background: var(--Color-Primary, #4F4F4F); 
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+    overflow: hidden;  /* Ensure swiper doesn’t overflow */
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;  /* Prevent wrapping of slides */
+    justify-content: flex-start;  /* Align slides from the start */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--Color-Primary, #4F4F4F);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 31px 65px;
+    flex-shrink: 0; /* Prevent shrinking of slides */
+    box-sizing: border-box;
+    width: auto;  /* Allow slide to dynamically adjust based on content */
+    color: var(--Color-Background, #F5F5F5);
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 24px ;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.swiper-slide a{
+    text-decoration: none;
+    color:var(----Color-Background);
+    transition: 0.4s ease;
+}
+.swiper-slide a:hover{
+    color:var(----Color-Secondair);
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 50px;
+    height: 48px !important;
+    width: 48px !important;
+    flex-shrink: 0;
+    border: 1px solid var(--Neutral-Black-200, rgba(24, 20, 31, 0.05));
+    background: var(--White-Full-Moon, #FFF);
+    box-shadow: 0px 0px 2px 0px rgba(24, 20, 31, 0.06), 0px 1px 2px 0px rgba(24, 20, 31, 0.10);
+}
+
+.swiper-button-next > svg,
+.swiper-button-prev > svg {
+    height: 36px !important;
+    width: 36px !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none;
+}
+
+.menu-title{
+    margin-top:40px;
+    margin-bottom:32px;
+
+}
+.menu-title span:first-child{
+    color: var(----Color-Text, #333);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 60% */
+    letter-spacing: 0.1px;
+    margin-bottom:8px;
+}
+
+.menu-title span:last-child{
+    color: var(----Color-Text, #333);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.1px;
+}
+
+.menu-search{
+    display: flex;
+    flex: 1 0 0;
+}
+
+.menu-search form {
+    display: flex;
+    padding: var(----Spacing-03, 12px) var(----Spacing-Big-04, 120px) var(----Spacing-03, 12px) var(----Spacing-03, 12px);
+    align-items: center;
+    gap: var(----Spacing-02, 8px);
+    flex: 1 0 0;
+    width: 100% !important;
+}
+.menu-search input{
+    border-radius: 4px ;
+    border: 1px solid var(----Color-Background, #F5F5F5);
+    background: var(----Color-Accent, #B0B0B0);
+    width: 100% !important;
+    padding: var(----Spacing-03, 12px) var(----Spacing-Big-04, 120px) var(----Spacing-03, 12px) var(----Spacing-03, 40px);
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-container button {
+    display: none; /* Hide the button */
+}
+.search-container .search-icon {
+    position: absolute;
+    left: 14px; /* Position the icon to the left inside the input field */
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #999;
+}
+
+.product-card{
+    border-radius: var(----Spacing-03, 12px);
+    background: var(----Color-Background, #F5F5F5);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25), 0px 0px 2px 0px rgba(0, 0, 0, 0.06);
+    padding: 24px var(----Spacing-05, 32px) var(----Spacing-05, 32px) var(----Spacing-05, 32px);
+    margin:8px 0;
+
+}
+
+
+.product-text{
+    gap: 24px;
+}
+
+.product-text span:first-child{
+    color: var(----Color-Text, #333);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.1px;
+}
+
+.product-text span:last-child{
+    color: var(----Color-Accent, #B0B0B0);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    
+}
+
+.product-btn-wrap{
+    gap:4px;
+}
+.product-btn{
+    display: flex;
+    padding: var(----Spacing-03, 12px) var(----Spacing-04, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(----Spacing-01, 4px);
+    border: 2px solid var(----Color-Secondair, #D35400);
+    background-color: var(----Color-Background);
+}
+
+.count{
+    border: 2px solid var(----Color-Primary, #4F4F4F);
+    color: var(----Color-Primary, #4F4F4F);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+    width:59px;
+}
+.add{
+    display: flex;
+    padding: var(----Spacing-03, 12px) var(----Spacing-04, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: var(----Spacing-01, 4px);
+    border: 2px solid #F5F5F5;
+}
+.hover, .hoverGray{
+    transition: 0.4s ease;
+}
+.hoverGray:hover{
+    background-color: var(----Color-Accent);
+}
+.hover:hover{
+    border:2px solid var(----Color-Highlight);
+}
+
+.product-image {
+    display: block; /* Removes extra spacing (useful in some cases) */
+    max-width: 100%; /* Ensures the image won't exceed the width of its parent */
+    height: auto; /* Maintains aspect ratio */
+    box-sizing: border-box; /* Ensures padding, borders are included in width */
+    border-radius: var(----Spacing-03, 12px);
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    box-shadow: 0px 0px 2px 0px rgba(24, 20, 31, 0.06), 0px 12px 24px 0px rgba(24, 20, 31, 0.10);
+    margin-bottom:32px
+}
+
+.basket-card{
+    border-radius: var(----Spacing-03, 12px);
+    background: var(----Color-Primary, #4F4F4F);
+    padding: var(----Spacing-05, 32px) var(----Spacing-04, 16px);
+    align-items: center;
+    gap: var(----Spacing-04, 16px);
+    flex: 1 0 0;
+}
+.basket-card span{
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.1px;
+}
+.basket-title{
+    margin-bottom:16px;
+}
+.diveder{
+    width:100% !important;
+    color:var(----Color-Accent);
+    border-radius: var(----Spacing-05, 32px);
+    margin:8px 0;
+}
+
+.basket-list-title span:first-child{
+    color: #FFF;
+    text-align: left;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+
+.basket-list-title span:last-child{
+    color: var(----Color-Accent, #B0B0B0);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+
+.basket-list-right-info{
+    gap:8px;
+}
+.basket-list-right-info span{
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+.basket-list-right-info button{
+    background-color: var(----Color-Primary);
+    border:none;
+}
+
+.basket-hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px;
+}
+
+
+.basket-content {
+    display: block; /* Show content by default */
+}
+.ListProduct{
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+.listDesc{
+    color: var(----Color-Accent, #B0B0B0);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.1px;
+}
+
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 998; /* Behind the basket content but above other elements */
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+/* Visible state for the overlay */
+.page-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+}
+
+input.green {
+    border-color: green;
+}
+
+input.red {
+    border-color: red;
+}
+
+#address-label {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 768px) { /* Adjust for sm breakpoint */
+    .basket-hamburger {
+        display: block;
+        position: fixed;
+        left: 3vw;
+        top: 27vh;
+        z-index: 1000;
+        padding: 8px;
+        width: fit-content;
+        border:3px solid #523726;
+        border-radius: 8px;
+        transition: 0.4s ease;
+    }
+    .basket-hamburger:hover{
+        background-color: #523726;
+    }
+
+    .basket-content {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 38.25vh; /* Adjust as needed to position below the hamburger */
+        width: 100%; /* Makes it span the screen width */
+        max-height: calc(100vh - 60px); /* Ensures it doesn't overflow the viewport */
+        background-color: #4F4F4F; /* Optional: adjust for visibility */
+        overflow-y: auto;
+        z-index: 999; /* Below hamburger */
+        padding: 32px ; /* Adjust padding as needed */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional */
+    }
+
+    .basket-content.active {
+        display: block;
+    }
+    .basket-card{
+        background-color: transparent;
+        padding:0 !important
+    }
+    .HamburgerIcon{
+        width: 48px !important;
+        height: 48px !important;
+    }
+    .responsHamburger{
+        justify-content: center !important;
+        margin:0 auto !important;
+    }
+    .menu-search form{
+        padding:0 !important;
+        margin-bottom:8px;
+    } 
+}
+
+
+
+
+@media (max-width:992px) {
+    .product-text{
+        gap: 0px !important;
+    }
+    .product-text span:first-child{
+        font-size:18px !important;
+    }
+    .product-text span:last-child{
+        font-size:12px !important;
+        line-height:1 !important;
+        margin-bottom: 16px;
+    }
+
+    .product-icon{
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .product-btn-wrap{
+        gap: 0 !important;
+    }
+    .product-btn{
+        padding: 7px 11px !important;
+
+    }
+    .basket-list-title span:last-child{
+        font-size: 12px;
+    }
+    .basket-card{
+        padding: 16px;
+    }
+    .basket-card span{
+        font-size: 16px;
+    }
+
+}
